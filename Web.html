@@ -1,0 +1,238 @@
+export default function MatricksTechnologiesWebsite() {
+  const services = [
+    {
+      title: "Software Development",
+      desc: "Custom websites, systems and mobile applications tailored for businesses.",
+      icon: "💻",
+    },
+    {
+      title: "Cybersecurity",
+      desc: "Protecting businesses through modern digital security solutions.",
+      icon: "🔒",
+    },
+    {
+      title: "Graphic Design",
+      desc: "Professional posters, branding, logos and marketing materials.",
+      icon: "🎨",
+    },
+    {
+      title: "Cloud & Hosting",
+      desc: "Reliable hosting, domains and scalable cloud infrastructure.",
+      icon: "☁️",
+    },
+    {
+      title: "AI Automation",
+      desc: "Smart AI solutions that improve productivity and efficiency.",
+      icon: "🤖",
+    },
+    {
+      title: "IT Consultancy",
+      desc: "Helping businesses adopt and manage modern technology.",
+      icon: "🛠️",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative px-6 lg:px-20 py-20">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+
+        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-block px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400 mb-6 animate-bounce">
+              Welcome to Matricks Technologies
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+              Building Smart Digital Solutions
+            </h1>
+
+            <p className="text-lg text-slate-300 leading-relaxed mb-8">
+              Matricks Technologies helps businesses grow through innovative software,
+              cybersecurity, AI automation and creative digital transformation.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl text-lg font-semibold shadow-2xl transition duration-300 hover:scale-105">
+                Get Started
+              </button>
+
+              <button className="px-8 py-4 border border-white/30 hover:bg-white/10 rounded-2xl text-lg font-semibold transition duration-300 hover:scale-105">
+                Our Services
+              </button>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center">
+            <div className="w-80 h-80 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 blur-2xl opacity-40 animate-pulse absolute"></div>
+
+            <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-[40px] p-10 shadow-2xl hover:scale-105 transition duration-500">
+              <div className="text-8xl text-center mb-6 animate-bounce">🚀</div>
+              <h2 className="text-3xl font-bold text-center mb-4">
+                Innovating The Future
+              </h2>
+              <p className="text-slate-300 text-center leading-relaxed">
+                Delivering modern technology solutions for startups, schools,
+                businesses and organizations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="px-6 lg:px-20 py-20 bg-white/5 backdrop-blur-md">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Our Core Services
+          </h2>
+          <p className="text-slate-300 max-w-2xl mx-auto">
+            We provide professional digital services designed to help businesses
+            operate smarter, safer and faster.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-white/10 border border-white/10 rounded-3xl p-8 hover:bg-blue-600/20 transition duration-500 hover:-translate-y-3 shadow-xl"
+            >
+              <div className="text-5xl mb-6 group-hover:scale-125 transition duration-500">
+                {service.icon}
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+
+              <p className="text-slate-300 leading-relaxed">
+                {service.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Statistics */}
+      <section className="px-6 lg:px-20 py-20">
+        <div className="grid md:grid-cols-4 gap-8 text-center">
+          {[
+            ["150+", "Projects Completed"],
+            ["100+", "Happy Clients"],
+            ["24/7", "Support Services"],
+            ["99%", "Customer Satisfaction"],
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/10 rounded-3xl p-10 border border-white/10 hover:scale-105 transition duration-500"
+            >
+              <h3 className="text-5xl font-extrabold text-blue-400 mb-3">
+                {item[0]}
+              </h3>
+              <p className="text-slate-300 text-lg">{item[1]}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="px-6 lg:px-20 py-20 bg-gradient-to-r from-blue-950/60 to-slate-900/60">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <h2 className="text-5xl font-bold mb-8">
+              Why Choose Matricks Technologies?
+            </h2>
+
+            <div className="space-y-6">
+              {[
+                "Modern and scalable digital solutions",
+                "Customer-focused approach",
+                "Affordable and professional services",
+                "Reliable technical support",
+                "Innovation driven by AI and automation",
+              ].map((point, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 bg-white/10 p-5 rounded-2xl border border-white/10 hover:bg-white/20 transition"
+                >
+                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-2xl">
+                    ✓
+                  </div>
+                  <p className="text-lg text-slate-200">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative flex justify-center">
+            <div className="absolute w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+
+            <div className="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] p-12 shadow-2xl text-center hover:rotate-1 transition duration-500">
+              <div className="text-8xl mb-6 animate-bounce">🌍</div>
+              <h3 className="text-4xl font-bold mb-4">Transforming Businesses Digitally</h3>
+              <p className="text-slate-300 leading-relaxed text-lg">
+                We combine creativity, innovation and advanced technology to help
+                organizations succeed in the digital era.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 lg:px-20 py-24 text-center">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[40px] p-14 shadow-2xl">
+          <h2 className="text-5xl font-extrabold mb-6">
+            Ready To Grow Your Business?
+          </h2>
+
+          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+            Let Matricks Technologies help you build secure, smart and scalable
+            digital solutions for your organization.
+          </p>
+
+          <button className="px-10 py-5 bg-white text-blue-700 rounded-2xl text-xl font-bold hover:scale-105 transition duration-300 shadow-2xl">
+            Contact Us Today
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 px-6 lg:px-20 py-10 bg-black/30">
+        <div className="grid lg:grid-cols-3 gap-10 items-center">
+          <div>
+            <h3 className="text-3xl font-bold mb-3">Matricks Technologies</h3>
+            <p className="text-slate-400">
+              Smart technology solutions for modern businesses.
+            </p>
+          </div>
+
+          <div className="space-y-2 text-slate-300">
+            <p>📧 info@matrickstechnologies.com</p>
+            <p>📞 +254 793 535 552</p>
+            <p>🌐 www.matrickstechnologies.com</p>
+          </div>
+
+          <div className="flex gap-4 lg:justify-end">
+            {['Facebook', 'Instagram', 'LinkedIn'].map((social, index) => (
+              <div
+                key={index}
+                className="px-5 py-3 rounded-2xl bg-white/10 hover:bg-blue-600 transition cursor-pointer"
+              >
+                {social}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center text-slate-500 mt-10">
+          © 2026 Matricks Technologies. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  );
+}
+      
